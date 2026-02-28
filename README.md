@@ -213,12 +213,4 @@ npm start
 
 ---
 
-## Submission Notes
 
-* Include `.git` folder to show commit history
-* Zip everything including backend, frontend, docker-compose.yml, Dockerfiles, .env, README.md
-* App should work end-to-end with `docker-compose up --build`
-
----
-
->>>>>>> 662f959 (Add .gitignore and initial project files)
