@@ -156,8 +156,12 @@ Ticket description: {description}
 ### Tickets
 
 1. **Tickets List**
-   ![Tickets List](frontend/screenshots/tickets.png)
+
+    ![Tickets List](frontend/screenshots/tickets.png)
+
+
 2. **Ticket Description**
+ 
    ![Ticket Description](frontend/screenshots/ticket_description.png)
 
 ---
