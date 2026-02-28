@@ -135,7 +135,7 @@ Ticket description: {description}
 
 ### Authentication
 
-![Login](frontend/screenshots/login.png)
+![Login](frontend/screenshots/Login.png)
 
 ### Landing Page
 
@@ -151,7 +151,7 @@ Ticket description: {description}
 
 ### Admin Panel
 
-![Admin Panel](frontend/screenshots/admin_panel.png)
+![Admin Panel](frontend/screenshots/adminpanel.png)
 
 ### Tickets
 
