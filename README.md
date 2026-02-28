@@ -160,6 +160,10 @@ Ticket description: {description}
     ![Tickets List](frontend/screenshots/tickets.png)
 
 
+
+
+---
+
 2. **Ticket Description**
  
    ![Ticket Description](frontend/screenshots/ticket_description.png)
