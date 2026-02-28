@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:14
+    container_name: ticket_db
+    restart: always
+    environment:
+      POSTGRES_DB: tickets
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: ticket_backend
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://postgres:postgres@db:5432/tickets
+      - DB_HOST=db
+      - DB_PORT=5432
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    ports:
+      - "8000:8000"
+    command: sh -c "./wait-for-db.sh"
+
+  frontend:
+    build: ./frontend
+    container_name: ticket_frontend
+    depends_on:
+      - backend
+    environment:
+      - REACT_APP_API_URL=http://ticket_backend:8000/api
+    ports:
+      - "3000:80"
+
+volumes:
+  postgres_data:
